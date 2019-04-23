@@ -12,18 +12,29 @@ import UIKit
 
 class PublicDotViewController: UIViewController {
 
-    @IBOutlet weak var dotCircleView: PTDotPageControl!
+    @IBOutlet weak var dotView_circle: PTDotPageControl!
     
-    @IBOutlet weak var dotRectView: PTDotPageControl!
+    @IBOutlet weak var dotView_rect: PTDotPageControl!
+    
+    @IBOutlet weak var dotView_image: PTDotPageControl!
+
+    @IBOutlet weak var dotView_label: PTDotPageControl!
+
 
     @IBOutlet weak var scrollView: UIScrollView!
     
     //MARK: - viewModel
-    /// 滑动线条
+    /// 长条型
     private var vm_dotRect = PublicDotRectangleViewModel.init()
 
     /// 圆
     private var vm_dotCircle = PublicDotCircleViewModel.init()
+    
+    /// 图片
+    private var vm_dotImage = PublicDotImageViewModel.init()
+    
+    /// 文本
+    private var vm_dotLabel = PublicDotLabelViewModel.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +45,17 @@ class PublicDotViewController: UIViewController {
     }
     
     func setIndex_viewModel() {
-        dotRectView.dataSource = vm_dotRect
-        dotRectView.delegate = vm_dotRect
+        dotView_rect.dataSource = vm_dotRect
+        dotView_rect.delegate = vm_dotRect
         
-        dotCircleView.dataSource = vm_dotCircle
-        dotCircleView.delegate = vm_dotCircle
+        dotView_circle.dataSource = vm_dotCircle
+        dotView_circle.delegate = vm_dotCircle
 
+        dotView_image.dataSource = vm_dotImage
+        dotView_image.delegate = vm_dotImage
+        
+        dotView_label.dataSource = vm_dotLabel
+        dotView_label.delegate = vm_dotLabel
     }
 }
 
@@ -47,8 +63,9 @@ class PublicDotViewController: UIViewController {
 extension PublicDotViewController: UIScrollViewDelegate{
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        dotRectView.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
-        dotCircleView.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
-
+        dotView_rect.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
+        dotView_circle.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
+        dotView_image.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
+        dotView_label.selectIndexPath = Int(scrollView.contentOffset.x/scrollView.bounds.width)
     }
 }

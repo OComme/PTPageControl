@@ -11,6 +11,9 @@
 		490292A9226D582C0049BAD4 /* PublicSlipLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490292A8226D582C0049BAD4 /* PublicSlipLineViewModel.swift */; };
 		490292AD226D5AE80049BAD4 /* PublicSlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490292AC226D5AE80049BAD4 /* PublicSlipViewController.swift */; };
 		490292B1226D5C830049BAD4 /* PublicSlipPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490292B0226D5C830049BAD4 /* PublicSlipPointViewModel.swift */; };
+		490D3985226EE45E00AA751B /* PublicSlipLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D3984226EE45E00AA751B /* PublicSlipLabelViewModel.swift */; };
+		490D3987226EE65200AA751B /* PublicDotImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D3986226EE65200AA751B /* PublicDotImageViewModel.swift */; };
+		490D3989226EE66000AA751B /* PublicDotLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D3988226EE66000AA751B /* PublicDotLabelViewModel.swift */; };
 		49807EE42269800E00ABF3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49807EE32269800E00ABF3F0 /* AppDelegate.swift */; };
 		49807EE62269800E00ABF3F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49807EE52269800E00ABF3F0 /* ViewController.swift */; };
 		49807EE92269800E00ABF3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49807EE72269800E00ABF3F0 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		490292A8226D582C0049BAD4 /* PublicSlipLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipLineViewModel.swift; sourceTree = "<group>"; };
 		490292AC226D5AE80049BAD4 /* PublicSlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipViewController.swift; sourceTree = "<group>"; };
 		490292B0226D5C830049BAD4 /* PublicSlipPointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipPointViewModel.swift; sourceTree = "<group>"; };
+		490D3984226EE45E00AA751B /* PublicSlipLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipLabelViewModel.swift; sourceTree = "<group>"; };
+		490D3986226EE65200AA751B /* PublicDotImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotImageViewModel.swift; sourceTree = "<group>"; };
+		490D3988226EE66000AA751B /* PublicDotLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotLabelViewModel.swift; sourceTree = "<group>"; };
 		49807EE02269800E00ABF3F0 /* PTPageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTPageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49807EE32269800E00ABF3F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49807EE52269800E00ABF3F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 				490292A8226D582C0049BAD4 /* PublicSlipLineViewModel.swift */,
 				490292B0226D5C830049BAD4 /* PublicSlipPointViewModel.swift */,
 				49F1F247226D8F9A00D4F05D /* PublicSlipImageViewModel.swift */,
+				490D3984226EE45E00AA751B /* PublicSlipLabelViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 			children = (
 				49F1F24B226D94A000D4F05D /* PublicDotRectangleViewModel.swift */,
 				49F1F2A6226DB53800D4F05D /* PublicDotCircleViewModel.swift */,
+				490D3986226EE65200AA751B /* PublicDotImageViewModel.swift */,
+				490D3988226EE66000AA751B /* PublicDotLabelViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -276,11 +285,14 @@
 				49F1F24C226D94A000D4F05D /* PublicDotRectangleViewModel.swift in Sources */,
 				49F1F2A7226DB53800D4F05D /* PublicDotCircleViewModel.swift in Sources */,
 				49807EE62269800E00ABF3F0 /* ViewController.swift in Sources */,
+				490D3985226EE45E00AA751B /* PublicSlipLabelViewModel.swift in Sources */,
 				49807EE42269800E00ABF3F0 /* AppDelegate.swift in Sources */,
 				49F1F248226D8F9A00D4F05D /* PublicSlipImageViewModel.swift in Sources */,
 				490292A72269D98B0049BAD4 /* PublicDotViewController.swift in Sources */,
 				490292B1226D5C830049BAD4 /* PublicSlipPointViewModel.swift in Sources */,
 				490292AD226D5AE80049BAD4 /* PublicSlipViewController.swift in Sources */,
+				490D3989226EE66000AA751B /* PublicDotLabelViewModel.swift in Sources */,
+				490D3987226EE65200AA751B /* PublicDotImageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

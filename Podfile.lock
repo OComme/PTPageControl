@@ -1,5 +1,5 @@
 PODS:
-  - PTPageControl (0.0.1):
+  - PTPageControl (0.0.2):
     - SnapKit
   - SnapKit (4.2.0)
 
@@ -13,7 +13,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  PTPageControl: 990b18eafa4a74b013cd97cbd2d791196ad794cf
+  PTPageControl: bed7c8441b14939013abc11d11cec7a42196a342
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: e8486e71d5dc5d39f25a46d2fb654a1f1d778b9e

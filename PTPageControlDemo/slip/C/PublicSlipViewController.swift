@@ -12,9 +12,12 @@ import UIKit
 
 class PublicSlipViewController: UIViewController {
 
-    @IBOutlet weak var slipImageView: PTSlipPageControl!
-    @IBOutlet weak var lineView: PTSlipPageControl!
-    @IBOutlet weak var pointView: PTSlipPageControl!
+    @IBOutlet weak var slipView_image: PTSlipPageControl!
+    @IBOutlet weak var slipView_line: PTSlipPageControl!
+    @IBOutlet weak var slipView_point: PTSlipPageControl!
+    
+    @IBOutlet weak var slipView_label: PTSlipPageControl!
+
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -23,9 +26,11 @@ class PublicSlipViewController: UIViewController {
     private var vm_slipLine = PublicSlipLineViewModel.init()
     /// 滑动点
     private var vm_slipPoint = PublicSlipPointViewModel.init()
-
     /// 滑动图
     private var vm_slipImage = PublicSlipImageViewModel.init()
+    /// 滑动文本
+    private var vm_slipLabel = PublicSlipLabelViewModel.init()
+
     
     
     override func viewDidLoad() {
@@ -37,12 +42,13 @@ class PublicSlipViewController: UIViewController {
     }
     
     func setIndex_viewModel() {
-        lineView.dataSource = vm_slipLine
+        slipView_line.dataSource = vm_slipLine
         
-        pointView.dataSource = vm_slipPoint
+        slipView_point.dataSource = vm_slipPoint
         
-        slipImageView.dataSource = vm_slipImage
+        slipView_image.dataSource = vm_slipImage
 
+        slipView_label.dataSource = vm_slipLabel
     }
     
     /*
@@ -59,9 +65,10 @@ class PublicSlipViewController: UIViewController {
 
 extension PublicSlipViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        lineView.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
-        pointView.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
-        slipImageView.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
+        slipView_line.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
+        slipView_point.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
+        slipView_image.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
+        slipView_label.animationFloat = scrollView.contentOffset.x/scrollView.bounds.width
 
     }
     
