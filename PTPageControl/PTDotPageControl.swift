@@ -114,7 +114,7 @@ open class PTDotPageControl: UIView {
         /// 通过dataSource拿到dot的数量
         let dotNumber = dataSource.numberOfDot(in: self)
         
-        for idx in 0...dotNumber {
+        for idx in 0..<dotNumber {
             
             /// 通过dataSource拿到dot的尺寸
             let dotSize = dataSource.sizeOfDot(in: self, index: idx)
