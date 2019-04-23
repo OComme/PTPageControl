@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,6 @@
 		49F1F248226D8F9A00D4F05D /* PublicSlipImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F247226D8F9A00D4F05D /* PublicSlipImageViewModel.swift */; };
 		49F1F24C226D94A000D4F05D /* PublicDotRectangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F24B226D94A000D4F05D /* PublicDotRectangleViewModel.swift */; };
 		49F1F2A7226DB53800D4F05D /* PublicDotCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F2A6226DB53800D4F05D /* PublicDotCircleViewModel.swift */; };
-		49F1F2AB226EA8EE00D4F05D /* PTDotPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F2A9226EA8EE00D4F05D /* PTDotPageControl.swift */; };
-		49F1F2AC226EA8EE00D4F05D /* PTSlipPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F2AA226EA8EE00D4F05D /* PTSlipPageControl.swift */; };
 		4D5DE2826BD74CE656ABC60F /* Pods_PTPageControlDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEEE5D65E3457C591589EBDC /* Pods_PTPageControlDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +39,6 @@
 		49F1F247226D8F9A00D4F05D /* PublicSlipImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipImageViewModel.swift; sourceTree = "<group>"; };
 		49F1F24B226D94A000D4F05D /* PublicDotRectangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotRectangleViewModel.swift; sourceTree = "<group>"; };
 		49F1F2A6226DB53800D4F05D /* PublicDotCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotCircleViewModel.swift; sourceTree = "<group>"; };
-		49F1F2A9226EA8EE00D4F05D /* PTDotPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDotPageControl.swift; sourceTree = "<group>"; };
-		49F1F2AA226EA8EE00D4F05D /* PTSlipPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTSlipPageControl.swift; sourceTree = "<group>"; };
 		FEEE5D65E3457C591589EBDC /* Pods_PTPageControlDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTPageControlDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,7 +119,6 @@
 		49807EE22269800E00ABF3F0 /* PTPageControlDemo */ = {
 			isa = PBXGroup;
 			children = (
-				49F1F2A8226EA8EE00D4F05D /* PTPageControl */,
 				490292A52269D9780049BAD4 /* dot */,
 				490292A22269D95C0049BAD4 /* slip */,
 				49807EE32269800E00ABF3F0 /* AppDelegate.swift */,
@@ -152,15 +147,6 @@
 			);
 			path = VM;
 			sourceTree = "<group>";
-		};
-		49F1F2A8226EA8EE00D4F05D /* PTPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				49F1F2A9226EA8EE00D4F05D /* PTDotPageControl.swift */,
-				49F1F2AA226EA8EE00D4F05D /* PTSlipPageControl.swift */,
-			);
-			path = PTPageControl;
-			sourceTree = SOURCE_ROOT;
 		};
 		834A338529B2207AE6412B74 /* Pods */ = {
 			isa = PBXGroup;
@@ -246,20 +232,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PTPageControlDemo/Pods-PTPageControlDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PTPageControlDemo/Pods-PTPageControlDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PTPageControlDemo/Pods-PTPageControlDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTPageControlDemo/Pods-PTPageControlDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PTPageControlDemo/Pods-PTPageControlDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EBEDEA3F8A59F12FFACC3BA9 /* [CP] Check Pods Manifest.lock */ = {
@@ -291,10 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F1F2AC226EA8EE00D4F05D /* PTSlipPageControl.swift in Sources */,
 				490292A9226D582C0049BAD4 /* PublicSlipLineViewModel.swift in Sources */,
 				49F1F24C226D94A000D4F05D /* PublicDotRectangleViewModel.swift in Sources */,
-				49F1F2AB226EA8EE00D4F05D /* PTDotPageControl.swift in Sources */,
 				49F1F2A7226DB53800D4F05D /* PublicDotCircleViewModel.swift in Sources */,
 				49807EE62269800E00ABF3F0 /* ViewController.swift in Sources */,
 				49807EE42269800E00ABF3F0 /* AppDelegate.swift in Sources */,

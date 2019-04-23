@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 
 /// 创建滑块的代理方式
-@objc protocol PTSlipPageControlDatasource: NSObjectProtocol {
+@objc public protocol PTSlipPageControlDatasource: NSObjectProtocol {
     /// 滑块的尺寸
     func sizeOfSlip(in pageControl: PTSlipPageControl) -> CGSize
     
@@ -28,17 +28,23 @@ import SnapKit
     @objc optional func edgeInsetOfSlip(in pageControl: PTSlipPageControl) -> UIEdgeInsets
 }
 
-@IBDesignable
 open class PTSlipPageControl: UIView {
     
     // MARK: default value
     /// 默认内边距
     static let defaultEdgeInset: UIEdgeInsets = .zero
     
+    /// 滑块的创建配置
+    @IBOutlet public weak var dataSource: PTSlipPageControlDatasource!{
+        didSet{
+            reloadData()
+        }
+    }
+    
     //MARK: api
     /// 当前选择的位置 实现dataSource的 widthOfSlip(in pageControl:_) 方法后自动调整位置
     /// 若是没有实现指定代理方法，则其值不能自动调整为偏移量对应的值
-    var selectIndexPath: Int?{
+    open var selectIndexPath: Int?{
         set{
             _selectIndexPath = newValue
         }
@@ -50,7 +56,7 @@ open class PTSlipPageControl: UIView {
     private var _selectIndexPath: Int!
     
     /// 动画进度 需要先实现dataSource的 widthOfSlip(in pageControl:_) 方法
-    var animationFloat: CGFloat!{
+    open var animationFloat: CGFloat!{
         didSet{
             if slipView == nil { return }
             
@@ -60,7 +66,7 @@ open class PTSlipPageControl: UIView {
     }
     
     /// 滑块的位置偏移量
-    var animationOffsetX: CGFloat!{
+    open var animationOffsetX: CGFloat!{
         didSet{
             if slipView == nil { return }
             let itemWidth = dataSource.widthOfSlip?(in: self)
@@ -82,14 +88,7 @@ open class PTSlipPageControl: UIView {
         }
         
     }
-    
-    /// 滑块的创建配置
-    @IBOutlet weak var dataSource: PTSlipPageControlDatasource!{
-        didSet{
-            reloadData()
-        }
-    }
-    
+
     //MARK: - subView
     /// 当前创建出的滑块
     private weak var slipView: UIView?

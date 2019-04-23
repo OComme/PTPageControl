@@ -7,6 +7,7 @@
 //
 
 import UIKit
+@_exported import PTPageControl
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

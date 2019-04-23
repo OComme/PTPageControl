@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 
 /// 创建dot的代理方式
-@objc protocol PTDotPageControlDatasource: NSObjectProtocol {
+@objc public protocol PTDotPageControlDatasource: NSObjectProtocol {
     /// 圆点的数量
     func numberOfDot(in pageControl: PTDotPageControl) -> Int
     
@@ -29,7 +29,7 @@ import SnapKit
 }
 
 /// dot的逻辑处理
-@objc protocol PTDotPageControlDelegate: NSObjectProtocol {
+@objc public protocol PTDotPageControlDelegate: NSObjectProtocol {
     /// 选中了某一个点
     func dotViewDidSelected(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
     
@@ -38,7 +38,7 @@ import SnapKit
 }
 
 
-class PTDotPageControl: UIView {
+open class PTDotPageControl: UIView {
     
     // MARK: default value
     /// 默认间距
@@ -48,7 +48,7 @@ class PTDotPageControl: UIView {
 
     //MARK: protcol
     /// dot的相关逻辑
-    @IBOutlet weak var delegate: PTDotPageControlDelegate?{
+    @IBOutlet public weak var delegate: PTDotPageControlDelegate?{
         didSet{
             if delegate == nil, dotEntitys.count == 0, dotEntitys.first == selectDotView { return }
             delegate?.dotViewDidSelected(in: self, dotView: dotEntitys.first!, index: 0)
@@ -57,7 +57,7 @@ class PTDotPageControl: UIView {
     }
     
     /// dot的创建配置
-    @IBOutlet weak var dataSource: PTDotPageControlDatasource!{
+    @IBOutlet public weak var dataSource: PTDotPageControlDatasource!{
         didSet{
             reloadData()
         }
@@ -66,13 +66,13 @@ class PTDotPageControl: UIView {
     //MARK: api
     
     /// 获取指定位置的dotView
-    public func dotView(for index: Int) -> UIView?{
+    open func dotView(for index: Int) -> UIView?{
         if index < 0 || index > dotEntitys.count - 1 { return nil }
         return dotEntitys[index]
     }
     
     /// 当前选中的dot位置
-    var selectIndexPath: Int!{
+    open var selectIndexPath: Int!{
         set{
             _selectIndexPath = newValue
             if _selectIndexPath > dotEntitys.count - 1 {
