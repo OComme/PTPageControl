@@ -50,7 +50,7 @@ open class PTDotPageControl: UIView {
     /// dot的相关逻辑
     @IBOutlet public weak var delegate: PTDotPageControlDelegate?{
         didSet{
-            if delegate == nil, dotEntitys.count == 0, dotEntitys.first == selectDotView { return }
+            if delegate == nil || dotEntitys.count == 0 || dotEntitys.first == selectDotView { return }
             delegate?.dotViewDidSelected(in: self, dotView: dotEntitys.first!, index: 0)
             selectDotView = dotEntitys.first
         }
