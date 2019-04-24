@@ -144,10 +144,10 @@ open class PTDotPageControl: UIView {
                 if tempView != nil{
                     make.left.equalTo(tempView!.snp.right).offset(dotSpace)
                 }else{
-                    make.left.equalTo(edgeInset.left)
+                    make.left.equalTo(edgeInset.left).priority(.high)
                 }
-                if idx == dotNumber{
-                    make.right.equalTo(-edgeInset.right)
+                if idx == (dotNumber - 1){
+                    make.right.equalTo(-edgeInset.right).priority(.high)
                 }
             }
             
