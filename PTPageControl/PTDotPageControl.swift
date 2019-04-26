@@ -54,18 +54,16 @@ open class PTDotPageControl: UIView {
 
     //MARK: protcol
     /// dot的相关逻辑
-    @IBOutlet public weak var delegate: PTDotPageControlDelegate?{
-        didSet{
-            if delegate == nil || dotEntitys.count == 0 || dotEntitys.first == selectDotView { return }
-            dataSource.dotViewWillSelect(in: self, dotView: dotEntitys.first!, index: 0)
-            selectDotView = dotEntitys.first
-        }
-    }
+    @IBOutlet public weak var delegate: PTDotPageControlDelegate?
     
     /// dot的创建配置
     @IBOutlet public weak var dataSource: PTDotPageControlDatasource!{
         didSet{
             reloadData()
+            
+            if dataSource == nil || dotEntitys.count == 0 || dotEntitys.first == selectDotView { return }
+            dataSource.dotViewWillSelect(in: self, dotView: dotEntitys.first!, index: 0)
+            selectDotView = dotEntitys.first
         }
     }
     
@@ -183,6 +181,7 @@ extension PTDotPageControl {
         
         delegate?.dotViewDidSelected(in: self, dotView: sender, index: _selectIndexPath)
         if selectDotView != nil && selectDotView != sender {
+            dataSource.dotViewWillCancelSelect(in: self, dotView: selectDotView!, index: _selectIndexPath)
             delegate?.dotViewCancelSelect?(in: self, dotView: selectDotView!, index: _selectIndexPath)
         }
         selectDotView = sender
