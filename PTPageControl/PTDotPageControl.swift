@@ -179,6 +179,7 @@ extension PTDotPageControl {
             _selectIndexPath = dotEntitys.count - 1
         }
         
+        dataSource.dotViewWillSelect(in: self, dotView: sender, index: _selectIndexPath)
         delegate?.dotViewDidSelected(in: self, dotView: sender, index: _selectIndexPath)
         if selectDotView != nil && selectDotView != sender {
             dataSource.dotViewWillCancelSelect(in: self, dotView: selectDotView!, index: _selectIndexPath)
