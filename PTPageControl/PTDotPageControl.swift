@@ -26,6 +26,12 @@ import SnapKit
     
     /// 内边距（左右边距），默认zero
     @objc optional func edgeInsetOfDot(in pageControl: PTDotPageControl) -> UIEdgeInsets
+    
+    /// 将要选中了某一个点(样式变化)
+    func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
+    
+    /// 将要对某一个点取消选中(样式变化)
+    @objc optional func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
 }
 
 /// dot的逻辑处理
@@ -51,7 +57,7 @@ open class PTDotPageControl: UIView {
     @IBOutlet public weak var delegate: PTDotPageControlDelegate?{
         didSet{
             if delegate == nil || dotEntitys.count == 0 || dotEntitys.first == selectDotView { return }
-            delegate?.dotViewDidSelected(in: self, dotView: dotEntitys.first!, index: 0)
+            dataSource.dotViewWillSelect(in: self, dotView: dotEntitys.first!, index: 0)
             selectDotView = dotEntitys.first
         }
     }
@@ -126,7 +132,7 @@ open class PTDotPageControl: UIView {
             
             addSubview(dotView)
             if idx == 0 {
-                delegate?.dotViewDidSelected(in: self, dotView: dotView, index: 0)
+                dataSource.dotViewWillSelect(in: self, dotView: dotEntitys.first!, index: 0)
                 selectDotView = dotView
             }else{
                 /// 通过dataSource拿到dot的间距
