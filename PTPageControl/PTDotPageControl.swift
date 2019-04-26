@@ -31,7 +31,7 @@ import SnapKit
     func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
     
     /// 将要对某一个点取消选中(样式变化)
-    @objc optional func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
+    func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int)
 }
 
 /// dot的逻辑处理
