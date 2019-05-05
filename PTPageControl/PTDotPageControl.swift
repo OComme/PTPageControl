@@ -82,7 +82,7 @@ open class PTDotPageControl: UIView {
             if _selectIndexPath > dotEntitys.count - 1 {
                 _selectIndexPath = dotEntitys.count - 1
             }
-            clickDotBtn(sender: dotEntitys[_selectIndexPath])
+            changeDotBtnState(sender: dotEntitys[_selectIndexPath])
         }
         get{
             return _selectIndexPath
@@ -172,6 +172,12 @@ open class PTDotPageControl: UIView {
 extension PTDotPageControl {
     /// 点击dotiView
     @objc func clickDotBtn(sender: UIView) {
+        changeDotBtnState(sender: sender)
+        delegate?.dotViewDidSelected(in: self, dotView: sender, index: _selectIndexPath)
+    }
+    
+    ///  改变dotiView状态
+    @objc func changeDotBtnState(sender: UIView) {
         if let idx = dotEntitys.firstIndex(of: sender){
             _selectIndexPath = idx
         }
@@ -180,7 +186,6 @@ extension PTDotPageControl {
         }
         
         dataSource.dotViewWillSelect(in: self, dotView: sender, index: _selectIndexPath)
-        delegate?.dotViewDidSelected(in: self, dotView: sender, index: _selectIndexPath)
         if selectDotView != nil && selectDotView != sender {
             dataSource.dotViewWillCancelSelect(in: self, dotView: selectDotView!, index: _selectIndexPath)
             delegate?.dotViewCancelSelect?(in: self, dotView: selectDotView!, index: _selectIndexPath)
