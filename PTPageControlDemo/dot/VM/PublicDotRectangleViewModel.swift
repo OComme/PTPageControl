@@ -14,6 +14,14 @@ class PublicDotRectangleViewModel: NSObject {
 
 
 extension PublicDotRectangleViewModel: PTDotPageControlDatasource{
+    func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.blue
+    }
+    
+    func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.red
+    }
+    
     func numberOfDot(in pageControl: PTDotPageControl) -> Int {
         return 5
     }
@@ -33,14 +41,3 @@ extension PublicDotRectangleViewModel: PTDotPageControlDatasource{
     }
     
 }
-
-extension PublicDotRectangleViewModel: PTDotPageControlDelegate{
-    func dotViewDidSelected(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.blue
-    }
-    
-    func dotViewCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.red
-    }
-}
-

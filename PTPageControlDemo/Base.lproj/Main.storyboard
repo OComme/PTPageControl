@@ -18,26 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJv-2k-ris">
-                                <rect key="frame" x="107" y="148" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="slipView"/>
-                                <connections>
-                                    <segue destination="6di-fN-gbw" kind="push" id="hXb-Zt-dqM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jV-M9-6wj">
-                                <rect key="frame" x="107" y="208" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jV-M9-6wj">
+                                <rect key="frame" x="161" y="212" width="92" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="dotView"/>
                                 <connections>
                                     <segue destination="yoR-2V-iNb" kind="push" id="LAA-8H-74D"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJv-2k-ris">
+                                <rect key="frame" x="161" y="148" width="92" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="slipView"/>
+                                <connections>
+                                    <segue destination="6di-fN-gbw" kind="push" id="hXb-Zt-dqM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6jV-M9-6wj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rnr-Kz-u6x"/>
+                            <constraint firstItem="jJv-2k-ris" firstAttribute="top" secondItem="K9A-Uz-9uF" secondAttribute="top" constant="60" id="ZEB-Bd-ouW"/>
+                            <constraint firstItem="6jV-M9-6wj" firstAttribute="top" secondItem="jJv-2k-ris" secondAttribute="bottom" constant="20" id="u2h-u6-Y9Y"/>
+                            <constraint firstItem="jJv-2k-ris" firstAttribute="centerX" secondItem="K9A-Uz-9uF" secondAttribute="centerX" id="v4o-Th-0aT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K9A-Uz-9uF"/>
                     </view>
                     <navigationItem key="navigationItem" id="QC6-6j-LSy"/>
@@ -78,28 +82,28 @@
                                     <outlet property="delegate" destination="6di-fN-gbw" id="Uoj-2t-t21"/>
                                 </connections>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acX-Xa-py5" customClass="PTSlipPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acX-Xa-py5" customClass="PTSlipPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="268" width="414" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="voP-r5-Wol"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-z6-rvq" customClass="PTSlipPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-z6-rvq" customClass="PTSlipPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="208" width="414" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uF5-dJ-j3I"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMK-d8-sz7" customClass="PTSlipPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMK-d8-sz7" customClass="PTSlipPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="148" width="414" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="A0q-fL-92C"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTO-ou-oSR" customClass="PTSlipPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTO-ou-oSR" customClass="PTSlipPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="328" width="414" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -147,45 +151,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiv-Jk-ctA">
-                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="479" width="414" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="yoR-2V-iNb" id="Jlp-bQ-82f"/>
                                 </connections>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-MP-h77" customClass="PTDotPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-MP-h77" customClass="PTDotPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="157" y="228" width="100" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yfl-Yc-EVJ"/>
-                                    <constraint firstAttribute="width" priority="750" constant="100" id="pIc-sH-cH4"/>
+                                    <constraint firstAttribute="width" priority="250" constant="100" id="pIc-sH-cH4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="txd-gV-0QS"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i8-l6-2ON" customClass="PTDotPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i8-l6-2ON" customClass="PTDotPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="157" y="148" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="100" id="7FX-C8-ix6"/>
+                                    <constraint firstAttribute="width" priority="250" constant="100" id="7FX-C8-ix6"/>
                                     <constraint firstAttribute="height" constant="50" id="Hkc-Af-uCq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZV-dz-4jb" customClass="PTDotPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZV-dz-4jb" customClass="PTDotPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="157" y="288" width="100" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="BdT-jC-9FO"/>
                                     <constraint firstAttribute="height" constant="30" id="feU-Fm-iUh"/>
-                                    <constraint firstAttribute="width" priority="750" constant="100" id="uuH-q8-46L"/>
+                                    <constraint firstAttribute="width" priority="250" constant="100" id="uuH-q8-46L"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tw-Mv-qLj" customClass="PTDotPageControl" customModule="PTPageControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tw-Mv-qLj" customClass="PTDotPageControl" customModule="PTPageControlDemo" customModuleProvider="target">
                                 <rect key="frame" x="157" y="348" width="100" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6DE-Jy-KvL"/>
-                                    <constraint firstAttribute="width" priority="750" constant="100" id="RRv-X1-XlY"/>
+                                    <constraint firstAttribute="width" priority="250" constant="100" id="RRv-X1-XlY"/>
                                     <constraint firstAttribute="height" constant="30" id="Xkl-SJ-BR1"/>
                                 </constraints>
                             </view>

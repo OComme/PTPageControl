@@ -19,6 +19,8 @@
 		49807EE92269800E00ABF3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49807EE72269800E00ABF3F0 /* Main.storyboard */; };
 		49807EEB2269800F00ABF3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49807EEA2269800F00ABF3F0 /* Assets.xcassets */; };
 		49807EEE2269800F00ABF3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49807EEC2269800F00ABF3F0 /* LaunchScreen.storyboard */; };
+		499B24EC228BBCE700D81FB9 /* PTDotPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B24EA228BBCE600D81FB9 /* PTDotPageControl.swift */; };
+		499B24ED228BBCE700D81FB9 /* PTSlipPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B24EB228BBCE600D81FB9 /* PTSlipPageControl.swift */; };
 		49F1F248226D8F9A00D4F05D /* PublicSlipImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F247226D8F9A00D4F05D /* PublicSlipImageViewModel.swift */; };
 		49F1F24C226D94A000D4F05D /* PublicDotRectangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F24B226D94A000D4F05D /* PublicDotRectangleViewModel.swift */; };
 		49F1F2A7226DB53800D4F05D /* PublicDotCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1F2A6226DB53800D4F05D /* PublicDotCircleViewModel.swift */; };
@@ -42,6 +44,8 @@
 		49807EEA2269800F00ABF3F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49807EED2269800F00ABF3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49807EEF2269800F00ABF3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		499B24EA228BBCE600D81FB9 /* PTDotPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDotPageControl.swift; sourceTree = "<group>"; };
+		499B24EB228BBCE600D81FB9 /* PTSlipPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTSlipPageControl.swift; sourceTree = "<group>"; };
 		49F1F247226D8F9A00D4F05D /* PublicSlipImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSlipImageViewModel.swift; sourceTree = "<group>"; };
 		49F1F24B226D94A000D4F05D /* PublicDotRectangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotRectangleViewModel.swift; sourceTree = "<group>"; };
 		49F1F2A6226DB53800D4F05D /* PublicDotCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDotCircleViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		49807EE22269800E00ABF3F0 /* PTPageControlDemo */ = {
 			isa = PBXGroup;
 			children = (
+				499B24E9228BBCE600D81FB9 /* PTPageControl */,
 				490292A52269D9780049BAD4 /* dot */,
 				490292A22269D95C0049BAD4 /* slip */,
 				49807EE32269800E00ABF3F0 /* AppDelegate.swift */,
@@ -137,6 +142,15 @@
 			);
 			path = PTPageControlDemo;
 			sourceTree = "<group>";
+		};
+		499B24E9228BBCE600D81FB9 /* PTPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				499B24EA228BBCE600D81FB9 /* PTDotPageControl.swift */,
+				499B24EB228BBCE600D81FB9 /* PTSlipPageControl.swift */,
+			);
+			path = PTPageControl;
+			sourceTree = SOURCE_ROOT;
 		};
 		49F1F249226D945600D4F05D /* C */ = {
 			isa = PBXGroup;
@@ -291,6 +305,8 @@
 				490292A72269D98B0049BAD4 /* PublicDotViewController.swift in Sources */,
 				490292B1226D5C830049BAD4 /* PublicSlipPointViewModel.swift in Sources */,
 				490292AD226D5AE80049BAD4 /* PublicSlipViewController.swift in Sources */,
+				499B24ED228BBCE700D81FB9 /* PTSlipPageControl.swift in Sources */,
+				499B24EC228BBCE700D81FB9 /* PTDotPageControl.swift in Sources */,
 				490D3989226EE66000AA751B /* PublicDotLabelViewModel.swift in Sources */,
 				490D3987226EE65200AA751B /* PublicDotImageViewModel.swift in Sources */,
 			);

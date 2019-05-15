@@ -13,6 +13,18 @@ class PublicDotLabelViewModel: NSObject {
 }
 
 extension PublicDotLabelViewModel: PTDotPageControlDatasource{
+    func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.blue
+        guard let btn = dotView as? UIButton else { return }
+        btn.setTitle("选中", for: UIControl.State.normal)
+    }
+    
+    func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.gray
+        guard let btn = dotView as? UIButton else { return }
+        btn.setTitle("未选中", for: UIControl.State.normal)
+    }
+    
     func numberOfDot(in pageControl: PTDotPageControl) -> Int {
         return 5
     }
@@ -35,18 +47,4 @@ extension PublicDotLabelViewModel: PTDotPageControlDatasource{
         return 5
     }
     
-}
-
-extension PublicDotLabelViewModel: PTDotPageControlDelegate{
-    func dotViewDidSelected(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.blue
-        guard let btn = dotView as? UIButton else { return }
-        btn.setTitle("选中", for: UIControl.State.normal)
-    }
-    
-    func dotViewCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.gray
-        guard let btn = dotView as? UIButton else { return }
-        btn.setTitle("未选中", for: UIControl.State.normal)
-    }
 }

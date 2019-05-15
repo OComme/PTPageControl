@@ -13,6 +13,16 @@ class PublicDotImageViewModel: NSObject {
 }
 
 extension PublicDotImageViewModel: PTDotPageControlDatasource{
+    func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        guard let imageView = dotView as? UIImageView else { return }
+        imageView.image = UIImage.init(named: "ios-marketing")
+    }
+    
+    func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        guard let imageView = dotView as? UIImageView else { return }
+        imageView.image = nil
+    }
+    
     func numberOfDot(in pageControl: PTDotPageControl) -> Int {
         return 5
     }
@@ -32,16 +42,4 @@ extension PublicDotImageViewModel: PTDotPageControlDatasource{
         return 5
     }
     
-}
-
-extension PublicDotImageViewModel: PTDotPageControlDelegate{
-    func dotViewDidSelected(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        guard let imageView = dotView as? UIImageView else { return }
-        imageView.image = UIImage.init(named: "ios-marketing")
-    }
-    
-    func dotViewCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        guard let imageView = dotView as? UIImageView else { return }
-        imageView.image = nil
-    }
 }

@@ -14,6 +14,14 @@ class PublicDotCircleViewModel: NSObject {
 }
 
 extension PublicDotCircleViewModel: PTDotPageControlDatasource{
+    func dotViewWillSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.blue
+    }
+    
+    func dotViewWillCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
+        dotView.backgroundColor = UIColor.red
+    }
+    
     func numberOfDot(in pageControl: PTDotPageControl) -> Int {
         return 5
     }
@@ -34,14 +42,3 @@ extension PublicDotCircleViewModel: PTDotPageControlDatasource{
     }
     
 }
-
-extension PublicDotCircleViewModel: PTDotPageControlDelegate{
-    func dotViewDidSelected(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.blue
-    }
-    
-    func dotViewCancelSelect(in pageControl: PTDotPageControl, dotView: UIView, index: Int) {
-        dotView.backgroundColor = UIColor.red
-    }
-}
-

@@ -1,21 +1,16 @@
 PODS:
-  - PTPageControl (0.0.2):
-    - SnapKit
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - PTPageControl
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - PTPageControl
     - SnapKit
 
 SPEC CHECKSUMS:
-  PTPageControl: bed7c8441b14939013abc11d11cec7a42196a342
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: e8486e71d5dc5d39f25a46d2fb654a1f1d778b9e
+PODFILE CHECKSUM: b67f10d7f4b84264bbd26e8bcf96cea28f4a778e
 
 COCOAPODS: 1.7.0.beta.3

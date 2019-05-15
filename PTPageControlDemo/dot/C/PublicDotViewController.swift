@@ -46,16 +46,12 @@ class PublicDotViewController: UIViewController {
     
     func setIndex_viewModel() {
         dotView_rect.dataSource = vm_dotRect
-        dotView_rect.delegate = vm_dotRect
         
         dotView_circle.dataSource = vm_dotCircle
-        dotView_circle.delegate = vm_dotCircle
 
         dotView_image.dataSource = vm_dotImage
-        dotView_image.delegate = vm_dotImage
         
         dotView_label.dataSource = vm_dotLabel
-        dotView_label.delegate = vm_dotLabel
     }
 }
 
